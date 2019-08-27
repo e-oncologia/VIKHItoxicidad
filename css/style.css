@@ -283,7 +283,7 @@ h5 {
   text-decoration: none;
 }
 h6 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
@@ -370,6 +370,10 @@ p::selection {
 }
 .gris {
   color: #bfc5d2;
+  transition: 0.6s;
+}
+.transparente {
+  opacity: 0.5
 }
 .negrita {
   color: #21cfac;
@@ -380,8 +384,6 @@ p::selection {
   font-weight: 800;
 }
 .cursiva {
-  color: #21cfac;
-  font-weight: 400;
   font-style: italic;
 }
 .piefoto {
@@ -524,6 +526,24 @@ p::selection {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.video {
+position: relative;
+padding-bottom: 56.25%; /* 16/9 ratio */
+padding-top: 30px; /* IE6 workaround*/
+height: 0;
+overflow: hidden;
+}
+
+.video iframe,
+.video object,
+.video embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 .imagen {
@@ -673,7 +693,9 @@ p::selection {
 .contorno:hover .separator {
   border-bottom: 3px solid #f2f2f2;
 }
-
+.contorno:hover .gris {
+  color: #81868e;
+}
 
 .contornoActivo {
   margin-top: 40px;
@@ -776,6 +798,10 @@ p::selection {
   height: 100px;
   text-align: center;
   line-height: 62px;
+}
+.title_text {
+  width: 95%;
+  display: inline-block;
 }
 .single_right_text {
   width: 70%;
@@ -1346,7 +1372,6 @@ p::selection {
 .vikhi-tabla td,
 .vikhi-tabla th {
   border: 0px solid #ddd;
-  padding: 5px;
 }
 .vikhi-tabla th {
   background-color: #21cfac;
@@ -1363,7 +1388,7 @@ p::selection {
 }
 
 .vikhi-tabla tr:nth-child(even) {
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 
 .vikhi-tabla tr:hover {
@@ -1373,14 +1398,13 @@ p::selection {
 
 .vikhi-tablalink {
   border-collapse: collapse;
-  width: 85%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 .vikhi-tablalink td,
 .vikhi-tablalink th {
   border: 0px solid #ddd;
-  padding: 5px;
 }
 .vikhi-tablalink th {
   background-color: #21cfac;
